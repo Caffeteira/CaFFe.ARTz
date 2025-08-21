@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaFFe Studio - Ilustração Digital & Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Patrick+Hand&display=swap');
+        
+        :root {
+            --primary: #FF8BA7;
+            --secondary: #FFC6C7;
+            --dark: #33272A;
+            --light: #FAEEE7;
+            --accent: #C3F0CA;
+        }
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Patrick Hand', cursive;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+        
+        .chibi-bg {
+            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e1299c56-1c93-4a5c-8cd4-1a4aa12ee69e.png');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+            border: 4px solid var(--dark);
+            border-radius: 20px !important;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px) rotate(2deg);
+        }
+        
+        .logo-rotate {
+            animation: bounce 0.8s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0) rotate(-5deg); }
+            to { transform: translateY(-8px) rotate(5deg); }
+        }
+        
+        .btn-cartoon {
+            border: 3px solid var(--dark) !important;
+            box-shadow: 5px 5px 0px rgba(0,0,0,0.2);
+            transition: all 0.2s ease;
+        }
+        
+        .btn-cartoon:hover {
+            transform: translateY(-3px) translateX(-3px);
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+        }
+        
+        .service-card {
+            border: 3px solid var(--dark);
+            border-radius: 20px;
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-card {
+            border: 3px dashed var(--dark);
+            border-radius: 15px;
+            background-color: var(--accent);
+        }
+        
+        .contact-form {
+            border: 3px solid var(--dark);
+            border-radius: 20px;
+            background-color: #FFF;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: 4px;
+        }
+        
+        .zigzag {
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary) 25%, transparent 25%) -10px 0,
+                        linear-gradient(225deg, var(--primary) 25%, transparent 25%) -10px 0,
+                        linear-gradient(315deg, var(--primary) 25%, transparent 25%),
+                        linear-gradient(45deg, var(--primary) 25%, transparent 25%);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="zigzag"></div>
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc8e5c2d-755d-4bb7-bd71-8a8a89fcf6bd.png" alt="Logo CaFFe Studio - Desenho estilizado de um café quente com vapor formando um coração" 
+                         class="w-16 h-16 logo-rotate">
+                    <span class="text-3xl font-bold text-pink-600" style="font-family: 'Patrick Hand', cursive;">CaFFe Studio</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-pink-600 transition nav-link">Home</a>
+                    <a href="#portfolio" class="text-gray-800 hover:text-pink-600 transition nav-link">Portfolio</a>
+                    <a href="#services" class="text-gray-800 hover:text-pink-600 transition nav-link">Serviços</a>
+                    <a href="#about" class="text-gray-800 hover:text-pink-600 transition nav-link">Sobre</a>
+                    <a href="#contact" class="text-gray-800 hover:text-pink-600 transition nav-link">Contato</a>
+                </div>
+                
+                <button class="md:hidden text-gray-800 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 px-6 chibi-bg text-white relative">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="container mx-auto relative z-10">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" style="text-shadow: 3px 3px 0px rgba(0,0,0,0.3);">Personagens com Personalidade!</h1>
+                <p class="text-xl md:text-2xl mb-8">Criamos ilustrações chibi, ícones e logotipos que contam histórias e encantam públicos</p>
+                <a href="#portfolio" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold inline-block transition btn-cartoon text-xl">
+                    Veja nosso trabalho
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Nosso Portfólio</h2>
+            
+            <!-- Portfolio Navigation -->
+            <div class="flex justify-center mb-12">
+                <div class="inline-flex rounded-full overflow-hidden border-4 border-gray-800">
+                    <button class="px-6 py-2 bg-pink-600 text-white font-bold">Todos</button>
+                    <button class="px-6 py-2 bg-yellow-300 hover:bg-yellow-400 transition font-bold">Chibi</button>
+                    <button class="px-6 py-2 bg-blue-300 hover:bg-blue-400 transition font-bold">Ícones</button>
+                    <button class="px-6 py-2 bg-green-300 hover:bg-green-400 transition font-bold">Logotipos</button>
+                </div>
+            </div>
+            
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Chibi Art 1 -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/22c713c7-c16b-49b3-a03e-065cda052b41.png" alt="Ilustração chibi de uma heroína de anime com cabelo rosa e traje futurista, sorrindo e segurando uma espada brilhante" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl mb-2">Heroína Chibi</h3>
+                        <p class="text-gray-600 mb-4">Personagem original para jogo mobile</p>
+                        <div>
+                            <span class="text-sm px-3 py-1 bg-pink-100 text-pink-800 rounded-full font-bold border-2 border-pink-800">Chibi</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Icon Set -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2fcf2dab-bf1f-48ce-8a6f-4caccd18a45c.png" alt="Conjunto de ícones minimalistas para aplicativo de café, incluindo xícara, grãos, cafeteira e termômetro em estilo plano" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl mb-2">Ícones para Café App</h3>
+                        <p class="text-gray-600 mb-4">Set de 32 ícones em estilo minimalista</p>
+                        <div>
+                            <span class="text-sm px-3 py-1 bg-blue-100 text-blue-800 rounded-full font-bold border-2 border-blue-800">Ícones</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Logo Design -->
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md bg-white">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/36c06220-45df-4e1f-b8f8-c4f43c78049d.png" alt="Logotipo moderno para doceria, com símbolo de cupcake estilizado e tipografia arredondada em tons pastéis" 
+                         class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl mb-2">Doceria Doce Sonho</h3>
+                        <p class="text-gray-600 mb-4">Identidade visual completa</p>
+                        <div>
+                            <span class="text-sm px-3 py-1 bg-green-100 text-green-800 rounded-full font-bold border-2 border-green-800">Logotipo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-4 border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white px-8 py-4 rounded-full font-semibold transition btn-cartoon text-xl">
+                    Carregar Mais (+)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">Nossos Serviços</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Chibi Art Service -->
+                <div class="bg-white p-8 service-card">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-pink-100 flex items-center justify-center border-4 border-pink-600">
+                        <i class="fas fa-paint-brush text-4xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Ilustração Chibi</h3>
+                    <p class="text-gray-600 mb-6 text-center">Personagens adoráveis e expressivos no estilo chibi perfeitos para conteúdos digitais, jogos e merchandise.</p>
+                    <ul class="text-left text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Personalização completa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Poses e expressões diversas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-pink-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Arte final de alta qualidade</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-semibold inline-block transition btn-cartoon">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Icon Design Service -->
+                <div class="bg-white p-8 service-card">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-blue-100 flex items-center justify-center border-4 border-blue-600">
+                        <i class="fas fa-icons text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Design de Ícones</h3>
+                    <p class="text-gray-600 mb-6 text-center">Ícones funcionais e estilizados para aplicativos, sites e sistemas, criados para melhorar a experiência do usuário.</p>
+                    <ul class="text-left text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Consistência visual</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Multiplos tamanhos e formatos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Estilo personalizado</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold inline-block transition btn-cartoon">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Logo Design Service -->
+                <div class="bg-white p-8 service-card">
+                    <div class="w-24 h-24 mx-auto mb-6 rounded-full bg-green-100 flex items-center justify-center border-4 border-green-600">
+                        <i class="fas fa-pen-fancy text-4xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Design de Logotipos</h3>
+                    <p class="text-gray-600 mb-6 text-center">Identidades visuais marcantes que comunicam a essência da sua marca com clareza e personalidade.</p>
+                    <ul class="text-left text-gray-600 space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Processo criativo colaborativo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Variações e aplicações</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-600 mt-1 mr-2 text-xl"></i>
+                            <span class="font-medium">Manual de identidade visual</span>
+                        </li>
+                    </ul>
+                    <div class="text-center">
+                        <a href="#contact" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-semibold inline-block transition btn-cartoon">
+                            Solicitar orçamento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-4xl font-bold mb-6">Sobre o CaFFe Studio</h2>
+                    <p class="text-xl text-gray-600 mb-6">Somos um estúdio de design especializado em criar ilustrações encantadoras e identidades visuais marcantes. Nosso amor por arte digital e café nos inspirou a fundar o CaFFe Studio, onde combinamos criatividade e técnica para dar vida às suas ideias.</p>
+                    <p class="text-xl text-gray-600 mb-8">Cada projeto é uma nova oportunidade de contar uma história visual única. Seja um personagem adorável, um conjunto de ícones funcionais ou uma identidade de marca, nos dedicamos a criar peças que encantam e comunicam com eficiência.</p>
+                    
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center bg-pink-100 p-4 rounded-lg border-2 border-pink-600">
+                            <i class="fas fa-check-circle text-pink-600 mr-3 text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">+500 projetos</h4>
+                                <p class="text-gray-600">concluídos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-blue-100 p-4 rounded-lg border-2 border-blue-600">
+                            <i class="fas fa-check-circle text-blue-600 mr-3 text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">+100 clientes</h4>
+                                <p class="text-gray-600">satisfeitos</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-yellow-100 p-4 rounded-lg border-2 border-yellow-600">
+                            <i class="fas fa-check-circle text-yellow-600 mr-3 text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">5 anos</h4>
+                                <p class="text-gray-600">de experiência</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-green-100 p-4 rounded-lg border-2 border-green-600">
+                            <i class="fas fa-check-circle text-green-600 mr-3 text-2xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Equipe</h4>
+                                <p class="text-gray-600">especializada</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-semibold inline-block transition btn-cartoon text-xl">
+                        Fale Conosco
+                    </a>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative rounded-xl overflow-hidden h-64 border-4 border-pink-500 transform rotate-2">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eedd4593-4b64-4eb0-8665-154079b72ed9.png" alt="Estúdio de trabalho criativo com mesa digitalizadora, café e plantas, mostrando ambiente de criação" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative rounded-xl overflow-hidden h-64 border-4 border-blue-500 transform -rotate-2">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ea1ae666-1371-44d5-b6de-9d1e1da60cf9.png" alt="Equipe do CaFFe Studio sorrindo e trabalhando em computadores, mostrando ambiente colaborativo" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative rounded-xl overflow-hidden h-64 col-span-2 border-4 border-yellow-500 transform rotate-1">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/05c50fda-6165-43b5-af08-b8d36bc4e761.png" alt="Processo criativo mostrando esboços, tablets gráficos e arte final sendo desenvolvida" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">O Que Dizem Nossos Clientes</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f79b72f4-9afd-4f03-8438-30c93b21ea86.png" alt="Foto de perfil de Ana Silva, diretora criativa" 
+                             class="w-16 h-16 rounded-full mr-4 object-cover border-2 border-pink-600">
+                        <div>
+                            <h4 class="font-bold text-xl">Ana Silva</h4>
+                            <p class="text-gray-500">Diretora Criativa</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 text-pink-600 text-5xl">"</div>
+                        <p class="text-gray-600 pl-6">Os personagens chibi que o CaFFe Studio criou para nosso jogo mobile foram perfeitos! Capturaram exatamente a essência que imaginamos e nossos usuários adoraram.</p>
+                        <div class="absolute -bottom-4 -right-4 text-pink-600 text-5xl">"</div>
+                    </div>
+                    <div class="mt-6 flex justify-center text-yellow-400 text-2xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/baaad624-3a60-47a1-ab92-226247a7a0be.png" alt="Foto de perfil de Carlos Menezes, CEO de startup" 
+                             class="w-16 h-16 rounded-full mr-4 object-cover border-2 border-blue-600">
+                        <div>
+                            <h4 class="font-bold text-xl">Carlos Menezes</h4>
+                            <p class="text-gray-500">Startup Tech</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 text-blue-600 text-5xl">"</div>
+                        <p class="text-gray-600 pl-6">O set de ícones que recebemos superou todas as expectativas. O CaFFe Studio entendeu perfeitamente nossa identidade e criou peças que são funcionais e visualmente impressionantes.</p>
+                        <div class="absolute -bottom-4 -right-4 text-blue-600 text-5xl">"</div>
+                    </div>
+                    <div class="mt-6 flex justify-center text-yellow-400 text-2xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/545d5d21-903c-4504-ade1-927e6b8e2c15.png" alt="Foto de perfil de Mariana Costa, empreendedora" 
+                             class="w-16 h-16 rounded-full mr-4 object-cover border-2 border-green-600">
+                        <div>
+                            <h4 class="font-bold text-xl">Mariana Costa</h4>
+                            <p class="text-gray-500">Doceria Doce Sonho</p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 text-green-600 text-5xl">"</div>
+                        <p class="text-gray-600 pl-6">Nosso novo logotipo é exatamente o que queríamos! O CaFFe Studio capturou a doçura e profissionalismo da nossa marca. O processo foi colaborativo e os resultados, incríveis.</p>
+                        <div class="absolute -bottom-4 -right-4 text-green-600 text-5xl">"</div>
+                    </div>
+                    <div class="mt-6 flex justify-center text-yellow-400 text-2xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-4xl font-bold mb-6">Entre em Contato</h2>
+                    <p class="text-xl text-gray-600 mb-8">Tem um projeto em mente ou quer saber mais sobre nossos serviços? Preencha o formulário ou nos contate diretamente pelos canais abaixo.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start bg-pink-50 p-4 rounded-xl border-2 border-pink-600">
+                            <i class="fas fa-envelope text-pink-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-xl">Email</h4>
+                                <p class="text-gray-600 text-lg">contato@caffestudio.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start bg-blue-50 p-4 rounded-xl border-2 border-blue-600">
+                            <i class="fas fa-phone-alt text-blue-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-xl">Telefone</h4>
+                                <p class="text-gray-600 text-lg">(11) 98765-4321</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start bg-green-50 p-4 rounded-xl border-2 border-green-600">
+                            <i class="fas fa-map-marker-alt text-green-600 text-2xl mt-1 mr-4"></i>
+                            <div>
+                                <h4 class="font-bold text-xl">Endereço</h4>
+                                <p class="text-gray-600 text-lg">Rua Criativa, 123 - São Paulo/SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-xl mb-4">Redes Sociais</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-12 h-12 rounded-full bg-pink-100 flex items-center justify-center text-pink-600 hover:bg-pink-600 hover:text-white transition border-2 border-pink-600">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 hover:bg-blue-600 hover:text-white transition border-2 border-blue-600">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 hover:bg-green-600 hover:text-white transition border-2 border-green-600">
+                                <i class="fab fa-behance text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white transition border-2 border-purple-600">
+                           
